@@ -150,7 +150,7 @@ function! s:Flake8()  " {{{
 
     " process results
     let l:results=getqflist()
-    let l:has_results=results != []
+    let l:has_results=len(results) > 1
     if l:has_results
         " markers
         if !s:flake8_show_in_gutter == 0 || !s:flake8_show_in_file == 0
