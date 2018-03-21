@@ -85,6 +85,7 @@ function! s:Setup()  " {{{
     call s:DeclareOption('flake8_pyflake_marker', '', '"F>"')
     call s:DeclareOption('flake8_complexity_marker', '', '"C>"')
     call s:DeclareOption('flake8_naming_marker', '', '"N>"')
+    call s:DeclareOption('flake8_docstring_marker', '', '"D>"')
 
     "" setup markerdata
 
@@ -95,12 +96,14 @@ function! s:Setup()  " {{{
         let s:markerdata['F'] = {'name': 'Flake8_PyFlake'}
         let s:markerdata['C'] = {'name': 'Flake8_Complexity'}
         let s:markerdata['N'] = {'name': 'Flake8_Naming'}
+        let s:markerdata['D'] = {'name': 'Flake8_Docstring'}
     endif
     let s:markerdata['E'].marker = s:flake8_error_marker
     let s:markerdata['W'].marker = s:flake8_warning_marker
     let s:markerdata['F'].marker = s:flake8_pyflake_marker
     let s:markerdata['C'].marker = s:flake8_complexity_marker
     let s:markerdata['N'].marker = s:flake8_naming_marker
+    let s:markerdata['D'].marker = s:flake8_docstring_marker
 endfunction  " }}}
 
 "" do flake8
