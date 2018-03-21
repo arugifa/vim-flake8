@@ -94,7 +94,7 @@ function! s:Setup()  " {{{
         let s:markerdata['W'] = {'name': 'Flake8_Warning'}
         let s:markerdata['F'] = {'name': 'Flake8_PyFlake'}
         let s:markerdata['C'] = {'name': 'Flake8_Complexity'}
-        let s:markerdata['N'] = {'name': 'Flake8_Nameing'}
+        let s:markerdata['N'] = {'name': 'Flake8_Naming'}
     endif
     let s:markerdata['E'].marker = s:flake8_error_marker
     let s:markerdata['W'].marker = s:flake8_warning_marker
