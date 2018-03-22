@@ -86,6 +86,7 @@ function! s:Setup()  " {{{
     call s:DeclareOption('flake8_complexity_marker', '', '"C>"')
     call s:DeclareOption('flake8_naming_marker', '', '"N>"')
     call s:DeclareOption('flake8_docstring_marker', '', '"D>"')
+    call s:DeclareOption('flake8_import_marker', '', '"I>"')
 
     "" setup markerdata
 
@@ -97,6 +98,7 @@ function! s:Setup()  " {{{
         let s:markerdata['C'] = {'name': 'Flake8_Complexity'}
         let s:markerdata['N'] = {'name': 'Flake8_Naming'}
         let s:markerdata['D'] = {'name': 'Flake8_Docstring'}
+        let s:markerdata['I'] = {'name': 'Flake8_Import'}
     endif
     let s:markerdata['E'].marker = s:flake8_error_marker
     let s:markerdata['W'].marker = s:flake8_warning_marker
@@ -104,6 +106,7 @@ function! s:Setup()  " {{{
     let s:markerdata['C'].marker = s:flake8_complexity_marker
     let s:markerdata['N'].marker = s:flake8_naming_marker
     let s:markerdata['D'].marker = s:flake8_docstring_marker
+    let s:markerdata['I'].marker = s:flake8_import_marker
 endfunction  " }}}
 
 "" do flake8
